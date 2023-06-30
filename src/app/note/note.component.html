@@ -1,0 +1,36 @@
+<mat-card>
+    <div class="card-header p-0">
+        <div class="d-flex">
+            <button *ngIf="note?.priority==='Critical'" color="warn" mat-icon-button>
+                <mat-icon>gpp_maybe</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='Low'" color="primary" mat-icon-button>
+                <mat-icon>arrow_circle_down</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='High'" color="warn" mat-icon-button>
+                <mat-icon>arrow_circle_up</mat-icon>
+            </button>
+            <button *ngIf="note?.priority==='Medium'" color="primary" mat-icon-button>
+                <mat-icon>remove_circle_outline</mat-icon>
+            </button>
+    
+            <h2>{{note?.title}}</h2>
+        </div>        
+        <span class="ms-2">{{note?.reminderDate}}</span>
+    </div>
+    
+    <div class="card-body cards">
+     <p class="card-text">{{note?.content}}</p>
+     <span class="category">{{note?.category}}</span>
+    </div>
+    
+    <div class="foot">
+        <button mat-icon-button> 
+            <mat-icon class="icon1" color="primary">commenting</mat-icon>
+            <mat-icon class="icon2" color="primary">editing</mat-icon>
+            <mat-icon class="icon3" color="primary">delete</mat-icon>
+            <mat-icon class="icon4" color="warn">notifications</mat-icon>
+        </button>
+    </div>
+</mat-card>
+    

@@ -1,0 +1,12 @@
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 90vw;
+}
+.icon {
+    margin: 5px;
+}
+
+
